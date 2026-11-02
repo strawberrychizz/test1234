@@ -37,7 +37,7 @@ let previous=null;document.getElementById('foto').addEventListener('change',e=>{
 (function(){
 const form=document.getElementById('form'),note=document.getElementById('fitnote');
 const sel='input[type=text],input[type=tel],textarea,select';
-const LIM=[['#rpk',60],['#pemilik',50],['#alamat',120],['#nib',25],['#tel',20],['.answer',100],['.bottom textarea',150]];
+const LIM=[['#rpk',60],['#pemilik',50],['#alamat',120],['#nib',25],['#tel',20],['.answer',100],['.bottom textarea',200]];
 LIM.forEach(([q,n])=>document.querySelectorAll(q).forEach(e=>e.maxLength=n));
 document.querySelectorAll(sel).forEach(c=>{const pvd=document.createElement('div');pvd.className='pv'+(c.tagName==='SELECT'?' s':'');
  if(c.maxLength>0){const w=document.createElement('div');w.className='fw';c.before(w);w.append(c,pvd);const k=document.createElement('div');k.className='cnt';w.append(k)}else c.after(pvd)});
