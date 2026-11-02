@@ -30,7 +30,7 @@ const data=[
 ['Penggunaan Sistem Informasi Elektronik SPHP','Periksa penggunaan aplikasi KlikSPHP dan kesesuaian pencatatan transaksi.'],
 ['Pengambilan Beras SPHP terakhir','Tanggal dan jumlah (kg) pada SO.'],
 ['Total pengambilan Beras SPHP dalam 30 hari terakhir','Periode dan total (kg) | Rekap SO dalam KlikSPHP.'],
-['Kesesuaian SO dengan pengambilan terakhir','Jumlah SO vs diterima (kg) | SO, surat jalan, bukti terima.'],
+['Kesesuaian identitas dan lokasi RPK','Bandingkan data di aplikasi dengan kondisi aktual.'],
 ['Kondisi dan keutuhan kemasan SPHP','Indikasi dibuka/dikemas ulang/dicampur | Observasi dan foto.'],
 ['Penjualan eceran kepada konsumen','Cek penjualan kemasan utuh; penjualan curah terlarang | Nota dan observasi.']];
 document.getElementById('checks').innerHTML=data.map(([title,hint],i)=>`<div class="item"><div class="question"><strong>${i+1}. ${title}</strong><div class="checks">${['S','TS','N/A'].map((v,j)=>`<label><input type="radio" name="status${i+1}" value="${v}">${v}</label>`).join('')}</div></div><div class="hint">${hint}</div>${i===3?DN:i===4?DN2:'<textarea class="answer" rows="1" aria-label="Keterangan ${title}" placeholder="Isi hasil / keterangan"></textarea>'}</div>`).join('');
